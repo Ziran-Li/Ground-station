@@ -1,0 +1,24 @@
+static double Spary_Area_Decode(u16 id,u16 var)
+{
+    static u16 area_m2_var;
+    static u16 area_10km2_var;
+    static double area_mu;
+
+    if(id==10)
+        area_m2_var = var;
+
+    if(id==11)
+    {
+        area_10km2_var = var;
+        area_mu = (area_10km2_var * 10000 + area_m2_var) * 0.0015;
+
+    }
+
+    return area_mu;
+
+
+
+}
+ 
+16 17上一天
+18 19上一次

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="XMonitor_GUI.AP_IDSET_Window"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="230" Background="#FF5A4D66">
+    <StackPanel>
+        <GroupBox Header="飞控编号设置：" Foreground="White" FontSize="15"  Height="229" >
+            <StackPanel>
+                <Label  Content="当前飞控编号:" Foreground="White"/>
+                <Label  Name="current_AP_ID" Content="空" Foreground="White"/>
+                <Label  Content="飞控编号重置:" Foreground="White"/>
+                <TextBox Name="Edit_AP_Name" InputMethod.IsInputMethodEnabled="False"  FontWeight="Light" PreviewTextInput="Edit_AP_Name_PreviewTextInput" PreviewKeyDown="Edit_AP_Name_PreviewKeyDown" />
+                <Button Content="编号设置" Name="AP_Code_Set" Margin="33,10,47,0"  Click="AP_Code_Set_Click"></Button>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</UserControl>
